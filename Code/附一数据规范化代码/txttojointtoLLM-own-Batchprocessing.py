@@ -139,7 +139,7 @@ for idx in range(start_index, end_index):
                         "model": "deepseek-ai/DeepSeek-R1",
                         "messages": [{"role": "user", "content": content}],
                         "stream": False,
-                        "max_tokens": 4096,
+                        "max_tokens": 16384,   # 输出的最大长度
                         "temperature": 0.1,
                         "top_p": 0.95,
                         "top_k": 20,
@@ -214,5 +214,6 @@ for idx in range(start_index, end_index):
 
         # ---优化：引入延迟---
         time.sleep(API_DELAY)
+
 
 print("\n所有患者病历处理完成！")
